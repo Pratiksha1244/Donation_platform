@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F7F7F7;
+    color: #333333;
+    scroll-behavior: smooth;
+    /* padding-top: 55px; */
+}
+  
+header {
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    font-size: 30px;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: sticky;      /* Make header stick on scroll */
+    top: 0;                /* Stick to the top */
+    z-index: 1000;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header img {
+    width: 200px;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+nav a {
+    color: black;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+.blank-navbar {
+    background-color: #6cc3e0;
+    height: 20px;
+    width: 100%;
+
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-bottom: 3px solid transparent; /* no underline by default */
+  transition: border-color 0.3s;
+}
+
+.nav-link:hover {
+  color: #87ca66;
+}
+
+.nav-link.active {
+  border-bottom: 3px solid black; /* underline for active link */
+}
+
+
+.Home {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #87ca66;
+    color: black;
+    background-image: url(img/bg\ img.webp);
+    width: 800x;
+    height: 80vh;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    background-size: cover; 
+    margin-bottom: -35px;
+} 
+
+
+
+.Home p {
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.Home h1 {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    padding: 0rem;
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+.Home img {
+    width: 100%;
+}
+
+
+
+.donate-btn {
+    background-color: #87ca66; 
+    color: #333333;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 30px;
+    width: 150px;
+    height: 12px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.donate-btn:hover {
+    background-color: #6cc3e0;
+    color: black;
+    transition: background-color 0.5s ease;
+}
+.button-wrapper{
+    margin-top: 0px;
+    
+}
+
+
+footer {
+    background-color: #6cc3e0;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+.About {
+    height: 120vh;
+    font-size: 30px;
+    text-align: center;
+    background-color: #6cc3e0;
+    color: black;
+    margin-bottom: -25px;
+     
+}
+.About h2{
+    font-size: 40px;
+}
+.About img{
+    width: 200px;
+    margin:20px;
+}
+.image-box {
+    width: 200px;           /* Set your desired box width */
+    height: 100px;          /* Set your desired box height */
+    border: 2px solid black; /* Optional: for visibility */
+    overflow: hidden;       /* Keeps image within box */
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9; /* Optional background */
+  }
+  .image-caption {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+}
+.image-caption span {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.3rem;
+  color: #333;
+}
+.Programs {
+    height: 100vh;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 0px;
+    margin-top: -40px;
+    background-color: #6cc3e0;
+    color: black;
+    margin-bottom: -25px;
+}
+.Programs h2{
+    font-size: 40px;
+}
+
+.Contact {
+    font-size: 30px;
+    height: 80vh;
+}
+
+.Contact1 {
+    height: 40vh;
+    background-color: #6cc3e0;
+    text-align: center;
+    margin-top: -40px;
+    padding-top: 0px; 
+    /* display: flex; */
+    align-items: center;
+    justify-content: flex-start; 
+    padding-left: 5rem;
+    color: black;
+    /* flex-direction: column; */
+    
+}
+.Contact1 p{
+    color: black;
+    font-size: 25px;
+    margin-top: 40px;
+}
+.Contact1 h2{
+    color: black;
+    font-size: 40px;
+}
+.Contact1 img{
+    width: 220px;
+}
+.Contact2 {
+    padding-left: 20px;
+    height: 50vh;
+    padding-top: 10px;
+}
+.Contact2 u{
+    font-size: 40px;
+}
+.Contact2 p{
+    font-size: 25px;
+}
+.map img{
+    width:23px;
+}
+.email img{
+    width: 28px;
+}
+.call img{
+    width: 28px;
+}
+
+.donation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 78vh;
+  background-color: #6cc3e0;
+  padding: 2rem;
+}
+
+.donation-box {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.donation-box h2 {
+  margin-bottom: 1.5rem;
+  font-size: 28px;
+  color: #222;
+}
+
+.donation-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.donation-box label {
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.donation-box input[type="text"],
+.donation-box input[type="email"],
+.donation-box input[type="number"] {
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.quick-amounts button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin: 5px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.quick-amounts button:hover {
+  background-color: #87ca66;
+  color: #fff;
+}
+
+.donate-btn1 {
+    background-color: #87ca66;
+    color: #222;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.donate-btn1:hover {
+    background-color: #6cc3e0;
+    color: black;
+    transition: background-color 0.8s ease;
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.auth-container input {
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.auth-container button {
+    padding: 0.7rem;
+    border-radius: 5px;
+    background-color: #87ca66;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background-color: #6cc3e0;
+}

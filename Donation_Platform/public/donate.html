@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate to AshaDeep Foundation</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+
+<body>
+    <header>
+        <div><img src="img/logo 2.png" alt="AshaDeep Foundation Logo" class="logo" /></div>
+        <nav>
+            <a href="home.html">Home</a>
+        </nav>
+    </header>
+
+    <section class="donation-container">
+        <div class="donation-box">
+            <h2>Make a Donation</h2>
+            <form id="donationForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+
+                <label for="amount">How much would you like to donate? (INR)</label>
+                <input type="number" id="amount" placeholder="Donation Amount" required>
+
+                <div class="quick-amounts">
+                    <strong>Quick Amount:</strong><br />
+                    <button type="button" onclick="setAmount(100)">₹100</button>
+                    <button type="button" onclick="setAmount(500)">₹500</button>
+                    <button type="button" onclick="setAmount(1000)">₹1000</button>
+                </div>
+
+                <button type="submit" class="donate-btn1">Donate</button>
+            </form>
+
+
+
+        </div>
+    </section>
+
+
+    <script>
+        document.getElementById('donationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const amount = parseInt(document.getElementById('amount').value.trim());
+
+            if (!name || !email || isNaN(amount) || amount < 1) {
+                alert("Please fill out all fields with valid data.");
+                return;
+            }
+
+            const options = {
+                key: "rzp_test_1DP5mmOlF5G5ag", // Replace with your Razorpay test/live key
+                amount: amount * 100,
+                currency: "INR",
+                name: "AshaDeep Foundation",
+                description: "Donation",
+                image: "img/logo 2.png",
+                handler: function (response) {
+                    alert("Thank you for your donation!\nPayment ID: " + response.razorpay_payment_id);
+
+                    // Optional: Send thank-you email via Formspree
+                    fetch("donate.php", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: new URLSearchParams({
+                            email: email,
+                            name: name,
+                            amount: amount,
+                            payment_id: response.razorpay_payment_id
+                        })
+                    })
+                        .then(res => res.text())
+                        .then(msg => {
+                            alert(msg); // show response from donate.php
+                            window.location.href = "home.html";
+                        });
+
+                },
+
+                prefill: {
+                    name: name,
+                    email: email
+                },
+                theme: {
+                    color: "#87ca66"
+                }
+            };
+
+            const rzp = new Razorpay(options);
+            rzp.open();
+        });
+    </script>
+    <script>
+        function setAmount(value) {
+            document.getElementById('amount').value = value;
+        }
+    </script>
+
+</body>
+
+</html>

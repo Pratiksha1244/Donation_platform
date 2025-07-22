@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AshaDeep Foundation - Donate Now</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <div>
+      <img src="img\logo 2.png" alt="AshaDeep Foundation Logo" class="logo" />
+    </div>
+    <nav>
+      <a href="#" class="nav-link" onclick="showSection('home')">Home</a>
+      <a href="#" class="nav-link" onclick="showSection('about')">About</a>
+      <a href="#" class="nav-link" onclick="showSection('programs')">Programs</a>
+      <a href="#" class="nav-link" onclick="showSection('contact')">Contact-Us</a>
+    </nav>
+    <!-- <a href="/logout">Logout</a> -->
+  </header>
+
+  <nav class="blank-navbar"></nav>
+
+
+
+  <section class="Home" id="home" style="display:block;">
+    <div>
+      <h1>Be the Change You Want to See</h1>
+      <p>Your donation helps provide food, education, and healthcare to those in need.</p>
+    </div>
+    <div class="button-wrapper">
+      <a href="donate.html" class="donate-btn">Donate Now!</a>
+    </div>
+  </section>
+
+  <section class="About" id="about" style="display:none;">
+    <!-- <h2>About Us</h2> -->
+    <div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/clubs and community.svg" />
+        <span>Clubs & Community</span>
+      </div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/creative projects logo.svg" />
+        <span>Creative Projects</span>
+      </div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/disaster relief logo.svg" />
+        <span>Disaster Relief</span>
+      </div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/fraternities logo.svg" />
+        <span>Fraternities & Sororities</span>
+      </div>
+    </div>
+    <div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/fun and special events.svg" />
+        <span>Fun & Special Events</span>
+      </div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/kids & family.svg" />
+        <span>Kids & Family</span>
+      </div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/medical and health.svg" />
+        <span>Medical & Health</span>
+      </div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/memorials and funerals.svg" />
+        <span>Memorials & Funerals</span>
+      </div>
+    </div>
+    <div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/military.svg" />
+        <span>Military</span>
+      </div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/charity.svg" />
+        <span>NonProfit/Charity</span>
+      </div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/pets.svg" />
+        <span>Pets & Animals</span>
+      </div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/politics.svg" />
+        <span>Politics & Public Office</span>
+      </div>
+    </div>
+    <div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/run walk.svg" />
+        <span>Run/Walk/Rides</span>
+      </div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/schools.svg" />
+        <span>Schools & Education</span>
+      </div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/sports.svg" />
+        <span>Sports & Teams</span>
+      </div>
+      <div class="image-caption">
+        <img class="image-box" src="img/about/trips.svg" />
+        <span>Trips & Adventure</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="Programs" id="programs" style="display:none;">
+    <!-- <h2>Our Programs</h2> -->
+
+  </section>
+  <section class="Contact" id="contact" style="display:none;">
+    <div class="Contact1">
+      <!-- <h2>Contact-Us</h2> -->
+      <p>We are here to help you and answer any questions you may have. Here is how to reach us!</p>
+      <img src="img/contact img.png" alt="Contact Us" class="contact-image" />
+    </div>
+    <div class="Contact2">
+      <p class="map">
+        <img src="img/map logo.svg" />
+        <u>India</u>
+      </p>
+      <p>Torna Girls Hostel, Sinhgad College Campus, Ambegaon budruk, Pune. 411041</p>
+      <p class="email">
+        <img src="img/email logo.svg" /> Email: pratikshabide.comp.nbnstic@gmail.com
+      </p>
+      <p class="call"><img src="img/call logo.svg" /> 7498660204</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AshaDeep Foundation. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      // Show the clicked section
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function () {
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
